@@ -1,0 +1,3 @@
+window.AcervoComponentes = window.AcervoComponentes || {};
+window.AcervoComponentes.categorias = ({ categories, books, escapeHTML }) =>
+    `<h1>Categorias</h1><div class="g g4">${categories.map(category => `<a class="card ct" href="#catalogo" data-a="cat" data-c="${escapeHTML(category)}">${escapeHTML(category)}<br><small>${books.filter(book => book.c == category).length} livros</small></a>`).join('')}</div>`;
